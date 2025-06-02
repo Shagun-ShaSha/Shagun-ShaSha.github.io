@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FastBuy - Checkout</title>
+  <link rel="stylesheet" href="checkout.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Checkout - FastBuy</h1>
+  </header>
+
+  <main class="checkout-container">
+    <section class="billing-info">
+      <h2>Billing Details</h2>
+      <form>
+        <label>
+          Full Name:
+          <input type="text" name="fullname" required>
+        </label>
+        <label>
+          Email Address:
+          <input type="email" name="email" required>
+        </label>
+        <label>
+          Address:
+          <input type="text" name="address" required>
+        </label>
+        <label>
+          City:
+          <input type="text" name="city" required>
+        </label>
+        <label>
+          ZIP Code:
+          <input type="text" name="zip" required>
+        </label>
+        <label>
+          Country:
+          <input type="text" name="country" required>
+        </label>
+        <label>
+          Payment Method:
+          <select name="payment" required>
+            <option value="">Select</option>
+            <option value="credit">Credit Card</option>
+            <option value="paypal">PayPal</option>
+            <option value="cod">Cash on Delivery</option>
+          </select>
+        </label>
+      </form>
+    </section>
+
+    <section class="order-summary">
+      <h2>Order Summary</h2>
+      <!-- Cart items will be injected here via JavaScript -->
+      <div class="summary-total">
+        <strong>Total:</strong>
+        <strong>$0.00</strong>
+      </div>
+      <button class="place-order">Place Order</button>
+    </section>
+  </main>
+
+  <script>
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const summaryContainer = document.querySelector('.order-summary');
+    const totalContainer = document.querySelector('.summary-total strong:last-child');
+
+    let total = 0;
+
+    if (cart.length > 0) {
+      cart.forEach(item => {
+        const div = document.createElement('div');
+        div.classList.add('summary-item');
+        div.innerHTML = `<span>${item.title}</span><span>$${item.price.toFixed(2)}</span>`;
+        summaryContainer.insertBefore(div, document.querySelector('.summary-total'));
+        total += item.price;
+      });
+
+      totalContainer.textContent = `$${total.toFixed(2)}`;
+    } else {
+      const empty = document.createElement('p');
+      empty.textContent = "Your cart is empty.";
+      summaryContainer.insertBefore(empty, document.querySelector('.summary-total'));
+      document.querySelector('.place-order').disabled = true;
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FastBuy - Product Page</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header>
+    FastBuy
+    <div class="cart-info">
+      <span id="cart-toggle" style="cursor: pointer;">🛒 <span id="cart-count">0</span> items</span>
+      <a href="checkout.html" class="checkout-button">Go to Checkout</a>
+
+      <div class="cart-dropdown" id="cart-dropdown">
+        <div id="cart-items"></div>
+        <p><strong>Total: $<span id="cart-total">0.00</span></strong></p>
+      </div>
+    </div>
+  </header>
+
+  <section class="product-grid">
+    <div class="product-card" data-title="Cool Sneakers" data-price="89.99">
+      <div class="product-image">
+        <img src="sneaker.jpg" alt="Sneakers" />
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Cool Sneakers</h2>
+        <p class="product-description">Stylish sneakers perfect for urban fashion and all-day comfort.</p>
+        <p class="product-price">$89.99</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+    </div>
+  
+    <div class="product-card" data-title="Smart Watch" data-price="149.99">
+      <div class="product-image">
+        <img src="watch.jpg" alt="Smart Watch" />
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Smart Watch</h2>
+        <p class="product-description">Track your fitness and notifications in style with this smartwatch.</p>
+        <p class="product-price">$149.99</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+    </div>
+  
+    <div class="product-card" data-title="Wireless Headphones" data-price="59.99">
+      <div class="product-image">
+        <img src="headphone.jpg" alt="Headphones" />
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Wireless Headphones</h2>
+        <p class="product-description">Experience rich sound and wireless freedom wherever you go.</p>
+        <p class="product-price">$59.99</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+    </div>
+  
+    <div class="product-card" data-title="Urban Backpack" data-price="39.99">
+      <div class="product-image">
+        <img src="backpack.jpg" alt="Backpack" />
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Urban Backpack</h2>
+        <p class="product-description">Durable and spacious backpack for work, travel, or study.</p>
+        <p class="product-price">$39.99</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+    </div>
+  
+    <div class="product-card" data-title="Gaming Mouse" data-price="29.99">
+      <div class="product-image">
+        <img src="mouse.jpg" alt="Gaming Mouse" />
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Gaming Mouse</h2>
+        <p class="product-description">Ergonomic gaming mouse with RGB lighting and fast response.</p>
+        <p class="product-price">$29.99</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+    </div>
+  
+    <div class="product-card" data-title="Mechanical Keyboard" data-price="79.99">
+      <div class="product-image">
+        <img src="keyboard.jpg" alt="Mechanical Keyboard" />
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Mechanical Keyboard</h2>
+        <p class="product-description">Clicky keys, backlit and designed for typing and gaming.</p>
+        <p class="product-price">$79.99</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+    </div>
+  
+    <div class="product-card" data-title="LED Desk Lamp" data-price="19.99">
+      <div class="product-image">
+        <img src="lamp.jpg" alt="LED Lamp" />
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">LED Desk Lamp</h2>
+        <p class="product-description">Minimalist LED lamp with adjustable brightness and angle.</p>
+        <p class="product-price">$19.99</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+    </div>
+  
+    <div class="product-card" data-title="Portable Charger" data-price="34.99">
+      <div class="product-image">
+        <img src="charger.jpg" alt="Portable Charger" />
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Portable Charger</h2>
+        <p class="product-description">High-capacity power bank to keep your devices charged anywhere.</p>
+        <p class="product-price">$34.99</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+    </div>
+  
+    <div class="product-card" data-title="Bluetooth Speaker" data-price="44.99">
+      <div class="product-image">
+        <img src="speaker.jpg" alt="Bluetooth Speaker" />
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Bluetooth Speaker</h2>
+        <p class="product-description">Loud and compact speaker for indoor and outdoor use.</p>
+        <p class="product-price">$44.99</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+    </div>
+  
+    <div class="product-card" data-title="Fitness Band" data-price="49.99">
+      <div class="product-image">
+        <img src="fitness.jpg" alt="Fitness Band" />
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Fitness Band</h2>
+        <p class="product-description">Track your steps, sleep, and heart rate on the go.</p>
+        <p class="product-price">$49.99</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+    </div>
+  
+    <div class="product-card" data-title="Noise Cancelling Earbuds" data-price="89.99">
+      <div class="product-image">
+        <img src="earbuds.jpg" alt="Noise Cancelling Earbuds" />
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Noise Cancelling Earbuds</h2>
+        <p class="product-description">Immerse yourself in music with active noise cancellation.</p>
+        <p class="product-price">$89.99</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+    </div>
+  
+    <div class="product-card" data-title="Phone Tripod Stand" data-price="24.99">
+      <div class="product-image">
+        <img src="tripod.jpg" alt="Phone Tripod Stand" />
+      </div>
+      <div class="product-info">
+        <h2 class="product-title">Phone Tripod Stand</h2>
+        <p class="product-description">Flexible and sturdy tripod for vlogging and video calls.</p>
+        <p class="product-price">$24.99</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+  
+
+  <script>
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    function updateCartCount() {
+      document.getElementById('cart-count').textContent = cart.length;
+    }
+
+    function saveCart() {
+      localStorage.setItem('cart', JSON.stringify(cart));
+    }
+
+    function renderCart() {
+      const container = document.getElementById('cart-items');
+      const totalEl = document.getElementById('cart-total');
+      container.innerHTML = '';
+      let total = 0;
+
+      if (cart.length === 0) {
+        container.innerHTML = '<p>Your cart is empty.</p>';
+        totalEl.textContent = '0.00';
+        return;
+      }
+
+      cart.forEach((item, index) => {
+        total += item.price;
+        const div = document.createElement('div');
+        div.classList.add('cart-item');
+        div.innerHTML = `
+          <span>${item.title} - $${item.price.toFixed(2)}</span>
+          <button onclick="removeFromCart(${index})">Remove</button>
+        `;
+        container.appendChild(div);
+      });
+
+      totalEl.textContent = total.toFixed(2);
+    }
+
+    function removeFromCart(index) {
+      cart.splice(index, 1);
+      saveCart();
+      updateCartCount();
+      renderCart();
+    }
+
+    document.querySelectorAll('.add-to-cart').forEach(button => {
+      button.addEventListener('click', () => {
+        const card = button.closest('.product-card');
+        const title = card.dataset.title;
+        const price = parseFloat(card.dataset.price);
+
+        cart.push({ title, price });
+        saveCart();
+        updateCartCount();
+        renderCart();
+      });
+    });
+
+    // Initial load
+    updateCartCount();
+    renderCart();
+
+    // Toggle cart dropdown on click
+    document.getElementById('cart-toggle').addEventListener('click', () => {
+        document.getElementById('cart-dropdown').classList.toggle('show');
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', (event) => {
+  const dropdown = document.getElementById('cart-dropdown');
+  const toggle = document.getElementById('cart-toggle');
+  if (!dropdown.contains(event.target) && !toggle.contains(event.target)) {
+    dropdown.classList.remove('show');
+  }
+});
+  </script>
+
+</body>
+</html>
